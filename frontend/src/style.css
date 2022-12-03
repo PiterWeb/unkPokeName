@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+
+html {
+    background-color: rgba(238, 43, 52, 1);
+    text-align: center;
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: "VT323", monospace;
+}
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
