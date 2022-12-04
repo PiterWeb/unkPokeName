@@ -4,11 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"io"
 	"math/rand"
 	"net/http"
 	"strings"
-	"github.com/wailsapp/wails/v2/pkg/runtime"
+	"time"
 )
 
 // App struct
@@ -39,7 +40,11 @@ func (a *App) startup(ctx context.Context) {
 func (a *App) GetPokemon() []string {
 
 	// random number between 1 and 898
-	number := rand.Intn(897) + 1
+
+	randSource := rand.NewSource(time.Now().UnixNano())
+	randGen := rand.New(randSource)
+
+	number := randGen.Intn(897) + 1
 
 	resp, err := http.Get("https://pokeapi.co/api/v2/pokemon/" + fmt.Sprintf("%d", number))
 
