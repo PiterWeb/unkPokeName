@@ -31,6 +31,8 @@ This will generate the executable inside /build/bin
 
 ## Play 🪀
 
+There is a release with the last version of the game [here](https://github.com/PiterWeb/unkPokeName/releases/latest)
+
 Run the executable 💻
 
 ![game screenshot](/example.png)
